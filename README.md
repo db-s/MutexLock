@@ -16,7 +16,7 @@ $formatter = new LineFormatter("%channel%.%level_name%: %message%");
 $syslog->setFormatter($formatter);
 $log->pushHandler($syslog);
 
-MutexLock\lock::init([
+MutexLock\Lock::init([
     'logger' => $log,
     'host'   => '127.0.0.1',
     'port'   => '6379',
